@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
+/* ── Design Tokens ──────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:              #F5F0E8;
+  --surface:         #fef9f1;
+  --surface-container: #f3ede1;
+  --text-primary:    #2C2C2A;
+  --text-muted:      #625f51;
+  --accent:          #8A9E8C;
+  --border:          #b7b2a1;
 }
 
+/* ── Tailwind v4 theme registration ─────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg:               var(--bg);
+  --color-surface:          var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-text-primary:     var(--text-primary);
+  --color-text-muted:       var(--text-muted);
+  --color-accent:           var(--accent);
+  --color-border:           var(--border);
+
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-inter:         var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headlines always use Space Grotesk */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Selection colour */
+::selection {
+  background: var(--accent);
+  color: var(--bg);
 }
