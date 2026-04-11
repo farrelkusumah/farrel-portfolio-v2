@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,170 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# farrel kusumah — personal archive
+
+Personal portfolio and archive. Built to last, designed to evolve.
+
+Live: `farrelkusumah.vercel.app` (or custom domain later)
+
+---
+
+## stack
+
+- **Next.js 14** — App Router
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** — page transitions + entrance animations
+- **Vercel** — deployment
+
+---
+
+## fonts
+
+- **Space Grotesk** — headlines, nav, display text
+- **Inter** — body, labels, captions
+
+Both loaded via Google Fonts in `app/layout.tsx`.
+
+---
+
+## color system
+
+| Name | Hex | Usage |
+|------|-----|-------|
+| Cream | `#F5F0E8` | Page background |
+| Surface | `#fef9f1` | Cards, nav |
+| Ink | `#2C2C2A` | Primary text, headlines |
+| Muted | `#625f51` | Secondary text, descriptions |
+| Sage | `#8A9E8C` | Accent — use sparingly |
+| Border | `#b7b2a1` | Dividers, card borders |
+| Container | `#f3ede1` | Card backgrounds, hover states |
+
+---
+
+## structure
+
+```
+app/
+├── page.tsx              # Homepage — hero + works index + closing quote
+├── work/
+│   ├── page.tsx          # Work listing — featured projects only
+│   └── [slug]/
+│       └── page.tsx      # Project detail — brief, process, outcome
+├── archive/
+│   └── page.tsx          # Archive ledger — all projects
+├── about/
+│   └── page.tsx          # About — bio, philosophy, expertise
+├── contact/
+│   └── page.tsx          # Contact — form + info
+└── layout.tsx            # Root layout — nav, footer, page transition
+
+components/
+├── Nav.tsx               # Fixed top nav — desktop + mobile hamburger
+├── Footer.tsx            # Footer — copyright + social links
+├── PageTransition.tsx    # Framer Motion page fade wrapper
+└── FadeUp.tsx            # Framer Motion entrance animation
+
+lib/
+└── projects.ts           # All project data — single source of truth
+```
+
+---
+
+## adding a new project
+
+Everything lives in `lib/projects.ts`. Add a new object to the `projects` array:
+
+```ts
+{
+  slug: "project-name",           // URL: /work/project-name
+  title: "PROJECT NAME",
+  category: "Web",
+  year: "2025",
+  shortDescription: "One line.",
+  role: "Frontend Developer",
+  skills: ["React", "TypeScript"],
+  brief: "The problem and context.",
+  process: [
+    { number: "01", title: "Step title", body: "What you did." },
+    { number: "02", title: "Step title", body: "What you did." }
+  ],
+  outcome: "What happened as a result.",
+  tags: ["React", "TypeScript"],
+  nextProject: "next-project-slug",  // or leave "" if last
+  featured: true,                    // true = shows on homepage + work page
+  refNumber: "REF. 007",            // increment from last entry
+  status: "COMPLETED"               // "COMPLETED" | "IN PROGRESS" | "ONGOING"
+}
+```
+
+**Rules:**
+- `featured: true` → appears on homepage works index + `/work` page
+- `featured: false` → archive only, shows as LOCKED until status = COMPLETED
+- Last featured project's `nextProject` should be `""` — detail page will auto-show "VIEW THE FULL ARCHIVE" link
+- Keep `refNumber` sequential — check last entry before adding
+
+---
+
+## design rules — never break these
+
+- No gradients, no shadows, no glassmorphism
+- Border radius: `0px` everywhere except full-round pills
+- Sage `#8A9E8C` is the only accent color — use it sparingly
+- Whitespace is intentional — don't add padding/margin without reason
+- Typography carries the visual weight — not decoration
+
+---
+
+## animations
+
+Three patterns only — defined in `components/FadeUp.tsx` and `components/PageTransition.tsx`:
+
+1. **Page transition** — fade in/out between routes, 300ms
+2. **Entrance** — fade up on load, staggered for lists, `once: true`
+3. **Hover** — CSS transition only, `duration-200`, colors only
+
+Do not add new animation patterns without good reason.
+
+---
+
+## deployment
+
+Deployed on Vercel. Auto-deploys on push to `main`.
+
+```bash
+# local dev
+npm run dev
+
+# build check before pushing
+npm run build
+```
+
+If build fails — most likely a TypeScript error in `lib/projects.ts`. Check that all required fields are present on every project object.
+
+---
+
+## domain
+
+Currently on Vercel subdomain. When ready to upgrade:
+1. Buy `farrelkusumah.com` (check availability first)
+2. Add custom domain in Vercel dashboard → Settings → Domains
+3. Update DNS at domain registrar — Vercel gives exact instructions
+
+---
+
+## future ideas
+
+- [ ] Add real project images — replace dark placeholders
+- [ ] Add real profile photo to about page
+- [ ] Journal / writing section under `/journal`
+- [ ] Dark mode toggle
+- [ ] Custom domain
+- [ ] OG image for social sharing
+- [ ] Add more projects as archive grows
+
+---
+
+*still in beta. just like me.*
+>>>>>>> f34f29cdd15b8cc697d82f3cb594f2cbb3847b01
