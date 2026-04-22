@@ -43,7 +43,7 @@ export default function AboutPage() {
               <div className="md:col-span-4 flex flex-col">
                 <div className="w-full aspect-square bg-[#1a1a1a] flex items-center justify-center object-cover">
                   <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-                    Image Placeholder
+                    Oops... image is still in progress, please come back later
                   </span>
                 </div>
               </div>

@@ -41,7 +41,7 @@ export default function WorkPage() {
                   <div className="w-full md:w-1/2 aspect-[16/9] md:aspect-[4/3] bg-[#1a1a1a] flex items-center justify-center shrink-0 object-cover">
                     {/* Image placeholder */}
                     <span className="font-[family-name:var(--font-inter)] text-xs uppercase tracking-widest text-[#7f7b6c]/50">
-                      Image Placeholder
+                      Oops... image is still in progress, please come back later
                     </span>
                   </div>
 

@@ -54,7 +54,7 @@ export default async function ProjectPage(props: PageProps) {
         <FadeUp delay={0.1}>
           <div className="w-full aspect-[16/7] bg-[#1a1a1a] flex items-center justify-center object-cover">
             <span className="font-[family-name:var(--font-inter)] text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-              Image Placeholder
+              Oops... image is still in progress, please come back later
             </span>
           </div>
         </FadeUp>
@@ -150,7 +150,7 @@ export default async function ProjectPage(props: PageProps) {
                 {/* Content Image Placeholder (as seen in design) */}
                 <div className="w-full aspect-[21/9] bg-[#1a1a1a] mt-16 flex items-center justify-center object-cover">
                   <span className="font-[family-name:var(--font-inter)] text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-                    Image Placeholder
+                    Oops... image is still in progress, please come back later
                   </span>
                 </div>
 
