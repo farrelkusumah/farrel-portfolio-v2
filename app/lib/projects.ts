@@ -22,6 +22,7 @@ export type Project = {
   featured: boolean;
   refNumber: string;
   status: "COMPLETED" | "IN PROGRESS" | "ONGOING";
+  site?: string; // Optional external site link
 };
 
 export const projects: Project[] = [
@@ -33,6 +34,7 @@ export const projects: Project[] = [
     featured: true,
     refNumber: "REF. 001",
     status: "COMPLETED",
+    site: "https://cretivox.com",
     shortDescription:
       "Crafted interactive animations using GSAP for digital storytelling.",
     role: "Frontend Developer",

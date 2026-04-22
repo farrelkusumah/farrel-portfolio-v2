@@ -102,14 +102,18 @@ export default async function ProjectPage(props: PageProps) {
                   </p>
                 </div>
 
-                <div className="col-span-2 md:col-span-1 mt-4 md:mt-0">
-                  <a
-                    href="#"
-                    className="inline-block border border-[#8A9E8C] text-[#8A9E8C] text-[10px] tracking-[0.25em] uppercase px-5 py-3 hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center justify-center w-fit"
-                  >
-                    LAUNCH SITE →
-                  </a>
-                </div>
+                {project.site && (
+                  <div className="col-span-2 md:col-span-1 mt-4 md:mt-0">
+                    <a
+                      href={project.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block border border-[#8A9E8C] text-[#8A9E8C] text-[10px] tracking-[0.25em] uppercase px-5 py-3 hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center justify-center w-fit"
+                    >
+                      VISIT SITE →
+                    </a>
+                  </div>
+                )}
               </div>
 
               {/* Right Column: Main Content */}
