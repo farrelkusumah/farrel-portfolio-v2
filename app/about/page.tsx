@@ -15,7 +15,7 @@ export default function AboutPage() {
         <section className="max-w-screen-2xl mx-auto px-5 md:px-16 pt-24 pb-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <FadeUp>
-              <h1 className="font-space-grotesk font-bold text-[10vw] leading-none text-[#2C2C2A]">
+              <h1 className="font-space-grotesk font-bold text-[10vw] leading-none text-[#2C2C2A] tracking-[-0.03em]">
                 about.
               </h1>
             </FadeUp>
@@ -50,7 +50,10 @@ export default function AboutPage() {
 
               {/* Right Column: Bio */}
               <div className="md:col-span-8 flex flex-col max-w-3xl">
-                <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl md:text-3xl lg:text-4xl font-medium text-[#2C2C2A] leading-tight mb-8">
+                <h2
+                  style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+                  className="font-light text-3xl md:text-4xl text-[#2C2C2A] leading-tight tracking-[-0.01em] mb-8"
+                >
                   I connect the dots between code and people.
                 </h2>
                 <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#625f51] leading-relaxed mb-6">
@@ -165,14 +168,17 @@ export default function AboutPage() {
         {/* ── CTA Section ────────────────────────────────────────────── */}
         <div className="w-full flex flex-col items-center justify-center pt-16 pb-32">
           <FadeUp>
-            <h2 className="font-[family-name:var(--font-space-grotesk)] font-bold text-[10vw] md:text-[6vw] uppercase text-[#2C2C2A] text-center leading-[0.9] mb-12">
+            <h2
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+              className="font-semibold text-[8vw] md:text-[6vw] uppercase text-[#2C2C2A] text-center leading-[0.9] mb-12 tracking-[-0.02em]"
+            >
               BEGIN THE<br />ARCHIVE.
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
             <Link
               href="/contact"
-              className="font-[family-name:var(--font-inter)] text-xs tracking-[0.25em] uppercase text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
+              className="font-inter text-xs tracking-[0.25em] uppercase text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
             >
               GET IN TOUCH →
             </Link>

@@ -56,46 +56,47 @@ export default function ArchivePage() {
                   return (
                     <FadeUp key={project.slug} delay={0.15 + (index * 0.05)}>
                       <div 
-                        className={`flex w-full items-center py-6 border-b border-[#b7b2a1]/20 hover:bg-[#f3ede1] md:hover:bg-[#ebe4d5] transition-colors duration-200 ${!isCompleted ? 'opacity-40' : ''}`}
+                        className={`group/row flex w-full items-center py-6 border-b border-[#b7b2a1]/20 hover:bg-[#ebe4d5] hover:translate-x-1 transition-all duration-200 ${!isCompleted ? 'opacity-40' : ''}`}
                       >
                         {/* REF NUMBER (Desktop only) */}
-                        <div className="hidden md:block w-24 shrink-0 font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] text-[#b7b2a1]">
+                        <div className="hidden md:block w-24 shrink-0 font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] text-[#b7b2a1]">
                           {project.refNumber}
                         </div>
 
                         {/* TITLE (and Category/Year on Mobile) */}
                         <div className="flex-grow flex flex-col gap-1">
-                          <div className="font-[family-name:var(--font-space-grotesk)] font-bold text-sm md:text-[15px] uppercase text-[#2C2C2A]">
+                          <div className="font-[family-name:var(--font-space-grotesk)] font-bold text-base md:text-lg uppercase text-[#2C2C2A]">
                             {project.title}
                           </div>
-                          <div className="md:hidden font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c]">
+                          <div className="md:hidden font-[family-name:var(--font-inter)] text-[10px] tracking-[0.2em] uppercase text-[#7f7b6c]">
                             {project.category} / {project.year}
                           </div>
                         </div>
 
                         {/* CATEGORY & YEAR (Desktop only) */}
-                        <div className="hidden md:block w-48 shrink-0 font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c]">
+                        <div className="hidden md:block w-48 shrink-0 font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase text-[#7f7b6c]">
                           {project.category} / {project.year}
                         </div>
 
                         {/* STATUS (Desktop only) */}
                         <div 
-                          className={`hidden md:block w-36 shrink-0 font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase truncate ${isCompleted ? 'text-[#8A9E8C]' : 'text-[#b7b2a1]'}`}
+                          className={`hidden md:block w-36 shrink-0 font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase truncate ${isCompleted ? 'text-[#8A9E8C]' : 'text-[#b7b2a1]'}`}
                         >
                           {project.status}
                         </div>
 
                         {/* ACTION */}
-                        <div className="w-20 shrink-0 font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-right">
+                        <div className="w-20 shrink-0 text-right">
                           {isCompleted ? (
                             <Link 
                               href={`/work/${project.slug}`} 
-                              className="text-[#2C2C2A] hover:opacity-70 transition-opacity duration-150 whitespace-nowrap min-h-[44px] flex items-center justify-end"
+                              className="group/action font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase text-[#2C2C2A] whitespace-nowrap min-h-[44px] inline-flex items-center justify-end gap-1 hover:font-bold transition-all duration-150"
                             >
-                              VIEW →
+                              VIEW
+                              <span className="inline-block group-hover/action:scale-125 group-hover/action:translate-x-0.5 transition-all duration-150 font-bold">→</span>
                             </Link>
                           ) : (
-                            <span className="text-[#b7b2a1] whitespace-nowrap min-h-[44px] flex items-center justify-end">LOCKED</span>
+                            <span className="font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase text-[#b7b2a1] whitespace-nowrap min-h-[44px] flex items-center justify-end">LOCKED</span>
                           )}
                         </div>
                       </div>

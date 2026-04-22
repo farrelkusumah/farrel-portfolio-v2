@@ -13,14 +13,14 @@ export default function ContactPage() {
         {/* Container */}
         <section className="max-w-screen-2xl mx-auto px-5 md:px-16 pt-24 md:pt-32">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-24">
-            
+
             {/* Left Column */}
             <div className="md:col-span-7">
               <FadeUp>
                 <h1 className="font-[family-name:var(--font-space-grotesk)] font-bold text-5xl md:text-[6vw] lg:text-[5.5vw] uppercase text-[#2C2C2A] leading-[0.9] tracking-tight">
                   LET&apos;S BUILD THE NEXT ARCHIVE.
                 </h1>
-                
+
                 <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#625f51] mt-6 max-w-md leading-relaxed">
                   Currently open for freelance projects, full-time roles, and long-term collaborations.
                 </p>
@@ -34,8 +34,8 @@ export default function ContactPage() {
                       <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                         NAME
                       </label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         placeholder="Your full name"
                         required
                         className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none transition-colors min-h-[44px]"
@@ -45,8 +45,8 @@ export default function ContactPage() {
                       <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                         EMAIL
                       </label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         placeholder="hello@example.com"
                         required
                         className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none transition-colors min-h-[44px]"
@@ -59,7 +59,7 @@ export default function ContactPage() {
                       PROJECT TYPE
                     </label>
                     <div className="relative">
-                      <select 
+                      <select
                         defaultValue=""
                         required
                         className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none cursor-pointer appearance-none transition-colors min-h-[44px]"
@@ -73,7 +73,7 @@ export default function ContactPage() {
                       </select>
                       {/* Custom dropdown arrow */}
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#7f7b6c]">
-                        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
                       </div>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                       MESSAGE
                     </label>
-                    <textarea 
+                    <textarea
                       placeholder="Briefly describe your vision..."
                       required
                       rows={4}
@@ -91,7 +91,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <button 
+                    <button
                       type="submit"
                       className="bg-[#516454] text-[#F5F0E8] font-[family-name:var(--font-inter)] text-xs tracking-widest uppercase px-8 py-4 mt-2 hover:opacity-80 transition-opacity min-h-[44px]"
                     >
@@ -111,11 +111,11 @@ export default function ContactPage() {
                     <p className="font-[family-name:var(--font-inter)] text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
                       DIRECT EMAIL
                     </p>
-                    <a 
-                      href="mailto:hello@domain.com" 
+                    <a
+                      href="mailto:farrelkusumah24@outlook.com"
                       className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#2C2C2A] border-b border-[#2C2C2A] pb-0.5 hover:text-[#516454] hover:border-[#516454] transition-colors inline-block min-h-[44px] flex items-center"
                     >
-                      hello@domain.com
+                      farrelkusumah24@outlook.com
                     </a>
                   </div>
 
@@ -163,7 +163,7 @@ export default function ContactPage() {
                 </div>
               </FadeUp>
             </div>
-            
+
           </div>
         </section>
       </div>

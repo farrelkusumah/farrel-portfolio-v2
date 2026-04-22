@@ -41,7 +41,7 @@ export default async function ProjectPage(props: PageProps) {
         {/* ── Page Header ────────────────────────────────────────────── */}
         <section className="max-w-screen-2xl mx-auto px-5 md:px-16 pt-24 pb-12">
           <FadeUp>
-            <h1 className="font-[family-name:var(--font-space-grotesk)] font-bold text-[10vw] md:text-[8vw] uppercase text-[#2C2C2A] leading-none">
+            <h1 className="font-[family-name:var(--font-space-grotesk)] font-bold text-[10vw] md:text-[8vw] uppercase text-[#2C2C2A] leading-none tracking-[-0.03em]">
               {project.title}
             </h1>
             <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] mt-4 max-w-xl">
@@ -120,7 +120,7 @@ export default async function ProjectPage(props: PageProps) {
                   <p className="font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-6">
                     THE BRIEF
                   </p>
-                  <p className="font-[family-name:var(--font-inter)] text-base text-[#2C2C2A] leading-relaxed max-w-2xl">
+                  <p className="font-[family-name:var(--font-fraunces)] font-light text-lg md:text-xl text-[#2C2C2A] leading-relaxed max-w-2xl tracking-[0.01em]">
                     {project.brief}
                   </p>
                 </div>
