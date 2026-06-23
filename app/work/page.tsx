@@ -14,7 +14,7 @@ export default function WorkPage() {
       <div className="pb-32">
         {/* ── Page Header ──────────────────────────────────────────────── */}
         <section className="max-w-screen-2xl mx-auto px-5 md:px-16 pt-24 pb-8">
-          <h1 className="font-[family-name:var(--font-space-grotesk)] font-bold text-[10vw] leading-none text-[#2C2C2A]">
+          <h1 className="font-space-grotesk font-bold text-[10vw] leading-none text-[#2C2C2A]">
             work.
           </h1>
         </section>
@@ -38,29 +38,29 @@ export default function WorkPage() {
                   }`}
                 >
                   {/* Left/Right half: Image */}
-                  <div className="w-full md:w-1/2 aspect-[16/9] md:aspect-[4/3] bg-[#1a1a1a] flex items-center justify-center shrink-0 object-cover">
+                  <div className="w-full md:w-1/2 aspect-video md:aspect-4/3 bg-[#1a1a1a] flex items-center justify-center shrink-0 object-cover">
                     {/* Image placeholder */}
-                    <span className="font-[family-name:var(--font-inter)] text-xs uppercase tracking-widest text-[#7f7b6c]/50">
+                    <span className="font-inter text-xs uppercase tracking-widest text-[#7f7b6c]/50">
                       Oops... image is still in progress, please come back later
                     </span>
                   </div>
 
                   {/* Left/Right half: Text */}
-                  <div className="w-full md:w-1/2 bg-[#f3ede1] p-6 md:p-16 flex flex-col justify-between transition-colors duration-200 group-hover:bg-[#ebe4d5]">
+                    <div className="w-full md:w-1/2 bg-[#f3ede1] p-6 md:p-16 flex flex-col justify-between transition-colors duration-200 group-hover:bg-[#ebe4d5]">
                     <div>
-                      <div className="flex justify-between items-center font-[family-name:var(--font-inter)] text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-8 md:mb-12">
+                      <div className="flex justify-between items-center font-inter text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-8 md:mb-12">
                         <span>{project.category}</span>
                         <span>{project.year}</span>
                       </div>
-                      <h2 className="font-[family-name:var(--font-space-grotesk)] font-bold text-3xl md:text-5xl text-[#2C2C2A] mb-4 md:mb-6">
+                      <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-[#2C2C2A] mb-4 md:mb-6">
                         {project.title}
                       </h2>
-                      <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] leading-relaxed max-w-xs">
+                      <p className="font-inter text-sm text-[#625f51] leading-relaxed max-w-xs">
                         {project.shortDescription}
                       </p>
                     </div>
                     
-                    <div className="mt-12 md:mt-0 font-[family-name:var(--font-inter)] text-xs tracking-widest uppercase text-[#2C2C2A] outline-none group-hover:opacity-70 transition-opacity duration-150">
+                    <div className="mt-12 md:mt-0 font-inter text-xs tracking-widest uppercase text-[#2C2C2A] outline-none group-hover:opacity-70 transition-opacity duration-150">
                       VIEW PROJECT →
                     </div>
                   </div>

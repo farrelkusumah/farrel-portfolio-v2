@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* Left cluster / Copyright */}
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-5 text-center md:text-left">
-          <span className="font-[family-name:var(--font-inter)] text-[10px] uppercase tracking-[0.2em] text-[#625f51]">
+          <span className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51]">
             © 2026 FARREL KUSUMAH — BUILT WITH INTENTIONAL ASYMMETRY
           </span>
         </div>
@@ -16,7 +16,7 @@ export default function Footer() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-[family-name:var(--font-inter)] text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
+            className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
           >
             LINKEDIN
           </a>
@@ -24,15 +24,15 @@ export default function Footer() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-[family-name:var(--font-inter)] text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
+            className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
           >
             INSTAGRAM
           </a>
           <a
-            href="https://read.cv/farrelkusumah"
+            href="https://farrelkusumah.vercel.app/Farrel-CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-[family-name:var(--font-inter)] text-[10px] uppercase tracking-[0.2em] text-[#2C2C2A] font-medium hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
+            className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#2C2C2A] font-medium hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
           >
             READCV
           </a>
@@ -40,7 +40,7 @@ export default function Footer() {
             href="https://github.com/farrelkusumah"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-[family-name:var(--font-inter)] text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
+            className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
           >
             GITHUB
           </a>

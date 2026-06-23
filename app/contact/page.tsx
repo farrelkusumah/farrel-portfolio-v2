@@ -17,11 +17,11 @@ export default function ContactPage() {
             {/* Left Column */}
             <div className="md:col-span-7">
               <FadeUp>
-                <h1 className="font-[family-name:var(--font-space-grotesk)] font-bold text-5xl md:text-[6vw] lg:text-[5.5vw] uppercase text-[#2C2C2A] leading-[0.9] tracking-tight">
+                <h1 className="font-space-grotesk font-bold text-5xl md:text-[6vw] lg:text-[5.5vw] uppercase text-[#2C2C2A] leading-[0.9] tracking-tight">
                   LET&apos;S BUILD THE NEXT ARCHIVE.
                 </h1>
 
-                <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#625f51] mt-6 max-w-md leading-relaxed">
+                <p className="font-inter text-sm md:text-base text-[#625f51] mt-6 max-w-md leading-relaxed">
                   Currently open for freelance projects, full-time roles, and long-term collaborations.
                 </p>
               </FadeUp>
@@ -31,38 +31,38 @@ export default function ContactPage() {
                 <form className="mt-16 w-full flex flex-col gap-8 md:gap-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                     <div className="w-full">
-                      <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
+                      <label className="block font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                         NAME
                       </label>
                       <input
                         type="text"
                         placeholder="Your full name"
                         required
-                        className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none transition-colors min-h-[44px]"
+                        className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-inter text-[#2C2C2A] placeholder-[#b7b2a1] outline-none transition-colors min-h-11"
                       />
                     </div>
                     <div className="w-full">
-                      <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
+                      <label className="block font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                         EMAIL
                       </label>
                       <input
                         type="email"
                         placeholder="hello@example.com"
                         required
-                        className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none transition-colors min-h-[44px]"
+                        className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-inter text-[#2C2C2A] placeholder-[#b7b2a1] outline-none transition-colors min-h-11"
                       />
                     </div>
                   </div>
 
                   <div className="w-full">
-                    <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
+                    <label className="block font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                       PROJECT TYPE
                     </label>
                     <div className="relative">
                       <select
                         defaultValue=""
                         required
-                        className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none cursor-pointer appearance-none transition-colors min-h-[44px]"
+                        className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-inter text-[#2C2C2A] placeholder-[#b7b2a1] outline-none cursor-pointer appearance-none transition-colors min-h-11"
                       >
                         <option value="" disabled hidden>Select project type</option>
                         <option value="frontend">Frontend Development</option>
@@ -79,21 +79,21 @@ export default function ContactPage() {
                   </div>
 
                   <div className="w-full">
-                    <label className="block font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
+                    <label className="block font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-2">
                       MESSAGE
                     </label>
                     <textarea
                       placeholder="Briefly describe your vision..."
                       required
                       rows={4}
-                      className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-[family-name:var(--font-inter)] text-[#2C2C2A] placeholder-[#b7b2a1] outline-none resize-y transition-colors min-h-[44px]"
+                      className="w-full border-b border-[#b7b2a1]/50 focus:border-[#2C2C2A] rounded-none bg-transparent py-3 text-sm font-inter text-[#2C2C2A] placeholder-[#b7b2a1] outline-none resize-y transition-colors min-h-11"
                     />
                   </div>
 
                   <div>
                     <button
                       type="submit"
-                      className="bg-[#516454] text-[#F5F0E8] font-[family-name:var(--font-inter)] text-xs tracking-widest uppercase px-8 py-4 mt-2 hover:opacity-80 transition-opacity min-h-[44px]"
+                      className="bg-[#516454] text-[#F5F0E8] font-inter text-xs tracking-widest uppercase px-8 py-4 mt-2 hover:opacity-80 transition-opacity min-h-11"
                     >
                       SEND INQUIRY →
                     </button>
@@ -108,22 +108,22 @@ export default function ContactPage() {
                 {/* Info Box */}
                 <div className="bg-[#f3ede1] p-6 md:p-10 flex flex-col gap-8">
                   <div>
-                    <p className="font-[family-name:var(--font-inter)] text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
+                    <p className="font-inter text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
                       DIRECT EMAIL
                     </p>
                     <a
                       href="mailto:farrelkusumah24@outlook.com"
-                      className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#2C2C2A] border-b border-[#2C2C2A] pb-0.5 hover:text-[#516454] hover:border-[#516454] transition-colors inline-block min-h-[44px] flex items-center"
+                      className="font-inter text-sm md:text-base text-[#2C2C2A] border-b border-[#2C2C2A] pb-0.5 hover:text-[#516454] hover:border-[#516454] transition-colors min-h-11 flex items-center"
                     >
                       farrelkusumah24@outlook.com
                     </a>
                   </div>
 
                   <div>
-                    <p className="font-[family-name:var(--font-inter)] text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
+                    <p className="font-inter text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
                       LOCATION
                     </p>
-                    <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#2C2C2A] flex items-center gap-2">
+                    <p className="font-inter text-sm md:text-base text-[#2C2C2A] flex items-center gap-2">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#625f51]">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
@@ -133,10 +133,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <p className="font-[family-name:var(--font-inter)] text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
+                    <p className="font-inter text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-1">
                       RESPONSE TIME
                     </p>
-                    <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#625f51] italic">
+                    <p className="font-inter text-sm md:text-base text-[#625f51] italic">
                       Usually within 24 hours.
                     </p>
                   </div>
@@ -144,10 +144,10 @@ export default function ContactPage() {
                   <div className="w-full h-px bg-[#b7b2a1]/20 my-2" />
 
                   <div>
-                    <p className="font-[family-name:var(--font-inter)] text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-3">
+                    <p className="font-inter text-[10px] tracking-widest uppercase text-[#7f7b6c] mb-3">
                       NEXT AVAILABILITY:
                     </p>
-                    <span className="border border-[#8A9E8C] text-[#8A9E8C] font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase px-4 py-3 inline-block">
+                    <span className="border border-[#8A9E8C] text-[#8A9E8C] font-inter text-[10px] tracking-[0.25em] uppercase px-4 py-3 inline-block">
                       AVAILABLE NOW
                     </span>
                   </div>
@@ -156,8 +156,8 @@ export default function ContactPage() {
 
               <FadeUp delay={0.3}>
                 {/* Optional Image Box matching the design layout */}
-                <div className="w-full aspect-[4/3] bg-[#1a1a1a] flex items-center justify-center object-cover">
-                  <span className="font-[family-name:var(--font-inter)] text-xs tracking-widest uppercase text-[#7f7b6c]/50">
+                <div className="w-full aspect-4/3 bg-[#1a1a1a] flex items-center justify-center object-cover">
+                  <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
                     Workspace Image
                   </span>
                 </div>

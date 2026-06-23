@@ -56,10 +56,10 @@ export default function AboutPage() {
                 >
                   I connect the dots between code and people.
                 </h2>
-                <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#625f51] leading-relaxed mb-6">
+                <p className="font-inter text-sm md:text-base text-[#625f51] leading-relaxed mb-6">
                   Farrel Kusumah is an engineer in progress — with a background in electrical engineering and a habit of asking why things are built the way they are. He builds things that are functional, a little unexpected, and still in beta.
                 </p>
-                <p className="font-[family-name:var(--font-inter)] text-sm md:text-base text-[#625f51] leading-relaxed mb-12">
+                <p className="font-inter text-sm md:text-base text-[#625f51] leading-relaxed mb-12">
                   Currently working at the intersection of frontend development and hardware systems. Based in Bandung, available globally.
                 </p>
 
@@ -82,7 +82,7 @@ export default function AboutPage() {
         <div className="max-w-screen-2xl mx-auto px-5 md:px-16 w-full mt-24 md:mt-32 pt-16">
           <FadeUp delay={0.1}>
             <div className="w-full overflow-hidden flex justify-center mb-16">
-              <h2 style={{ color: "#e8e2d1" }} className="font-[family-name:var(--font-space-grotesk)] font-bold text-[15vw] md:text-[13vw] text-[#e8e2d1] whitespace-nowrap select-none leading-none">
+              <h2 style={{ color: "#e8e2d1" }} className="font-space-grotesk font-bold text-[15vw] md:text-[13vw] text-[#e8e2d1] whitespace-nowrap select-none leading-none">
                 PHILOSOPHY
               </h2>
             </div>
@@ -91,20 +91,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             <FadeUp delay={0.2}>
               <div>
-                <h3 style={{ fontWeight: "bold" }} className="font-[family-name:var(--font-space-grotesk)] text-xs md:text-sm tracking-[0.25em] uppercase text-[#2C2C2A] font-bold mb-4">
+                <h3 style={{ fontWeight: "bold" }} className="font-space-grotesk text-xs md:text-sm tracking-[0.25em] uppercase text-[#2C2C2A] font-bold mb-4">
                   THE MESSY MIDDLE
                 </h3>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] leading-relaxed max-w-sm">
+                <p className="font-inter text-sm text-[#625f51] leading-relaxed max-w-sm">
                   The most interesting problems live between disciplines. Between electrical and software. Between logic and design. That&apos;s where I want to work.
                 </p>
               </div>
             </FadeUp>
             <FadeUp delay={0.3}>
               <div>
-                <h3 style={{ fontWeight: "bold" }} className="font-[family-name:var(--font-space-grotesk)] text-xs md:text-sm tracking-[0.25em] uppercase text-[#2C2C2A] font-bold mb-4">
+                <h3 style={{ fontWeight: "bold" }} className="font-space-grotesk text-xs md:text-sm tracking-[0.25em] uppercase text-[#2C2C2A] font-bold mb-4">
                   STILL IN BETA
                 </h3>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] leading-relaxed max-w-sm">
+                <p className="font-inter text-sm text-[#625f51] leading-relaxed max-w-sm">
                   I don&apos;t believe in finished. I believe in deliberate iteration — shipping, learning, and rebuilding with more context than before.
                 </p>
               </div>
@@ -113,9 +113,9 @@ export default function AboutPage() {
         </div>
 
         {/* ── Divider & Section Label ────────────────────────────────── */}
-        <div className="max-w-screen-2xl mx-auto px-5 md:px-16 w-full mt-12 mb-16">
+          <div className="max-w-screen-2xl mx-auto px-5 md:px-16 w-full mt-12 mb-16">
           <div className="w-full h-px bg-[#b7b2a1]/30 mb-8" />
-          <span className="font-[family-name:var(--font-inter)] text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c]">
+          <span className="font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c]">
             CORE EXPERTISE
           </span>
         </div>
@@ -125,39 +125,39 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             <FadeUp delay={0.1}>
               <div>
-                <h4 className="font-[family-name:var(--font-space-grotesk)] font-bold text-4xl text-[#8A9E8C] opacity-40">
+                <h4 className="font-space-grotesk font-bold text-4xl text-[#8A9E8C] opacity-40">
                   01
                 </h4>
-                <h5 className="font-[family-name:var(--font-inter)] text-xs tracking-[0.25em] uppercase text-[#2C2C2A] font-medium mt-4 mb-3">
+                <h5 className="font-inter text-xs tracking-[0.25em] uppercase text-[#2C2C2A] font-medium mt-4 mb-3">
                   FRONTEND ENGINEERING
                 </h5>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] leading-relaxed">
+                <p className="font-inter text-sm text-[#625f51] leading-relaxed">
                   Building user interfaces with modern frameworks — React, Next.js — focusing on clean, scalable architecture and fluid motion.
                 </p>
               </div>
             </FadeUp>
             <FadeUp delay={0.2}>
               <div>
-                <h4 className="font-[family-name:var(--font-space-grotesk)] font-bold text-4xl text-[#8A9E8C] opacity-40">
+                <h4 className="font-space-grotesk font-bold text-4xl text-[#8A9E8C] opacity-40">
                   02
                 </h4>
-                <h5 className="font-[family-name:var(--font-inter)] text-xs tracking-[0.25em] uppercase text-[#2C2C2A] font-medium mt-4 mb-3">
+                <h5 className="font-inter text-xs tracking-[0.25em] uppercase text-[#2C2C2A] font-medium mt-4 mb-3">
                   HARDWARE + SYSTEMS THINKING
                 </h5>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] leading-relaxed">
+                <p className="font-inter text-sm text-[#625f51] leading-relaxed">
                   Electrical engineering background means I understand systems at a foundational level. From hardware logic to embedded code.
                 </p>
               </div>
             </FadeUp>
             <FadeUp delay={0.3}>
               <div>
-                <h4 className="font-[family-name:var(--font-space-grotesk)] font-bold text-4xl text-[#8A9E8C] opacity-40">
+                <h4 className="font-space-grotesk font-bold text-4xl text-[#8A9E8C] opacity-40">
                   03
                 </h4>
-                <h5 className="font-[family-name:var(--font-inter)] text-xs tracking-[0.25em] uppercase text-[#2C2C2A] font-medium mt-4 mb-3">
+                <h5 className="font-inter text-xs tracking-[0.25em] uppercase text-[#2C2C2A] font-medium mt-4 mb-3">
                   CROSS-DISCIPLINARY APPROACH
                 </h5>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-[#625f51] leading-relaxed">
+                <p className="font-inter text-sm text-[#625f51] leading-relaxed">
                   Every project needs someone who understands how the moving parts connect. I bridge the gap between design, logic, and hardware.
                 </p>
               </div>
@@ -178,7 +178,7 @@ export default function AboutPage() {
           <FadeUp delay={0.1}>
             <Link
               href="/contact"
-              className="font-inter text-xs tracking-[0.25em] uppercase text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-[44px] flex items-center"
+              className="font-inter text-xs tracking-[0.25em] uppercase text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
             >
               GET IN TOUCH →
             </Link>
