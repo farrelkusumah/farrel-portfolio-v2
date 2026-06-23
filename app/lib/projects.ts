@@ -54,8 +54,8 @@ export const projects: Project[] = [
         body: "Built product listing, filtering, bestseller sections, and a recommendation layer. Added multilingual support (ID, EN, JP) and user auth. Kept the UI clean — the kind of store you'd actually want to shop at.",
       },
     ],
-    heroImage: "/ravio.png",
-    contentImage: "/ravio.png",
+    heroImage: "/Image/ravio.webp",
+    contentImage: "/Image/ravio.webp",
     outcome:
       "A fully functional fashion e-commerce store with product browsing, filtering by category and type, customer reviews, personalized recommendations, and multilingual support. Built entirely as a personal project to see it through from idea to deployed product.",
     tags: ["React", "E-commerce", "Multilingual", "Auth", "Personal Project"],
@@ -120,8 +120,8 @@ export const projects: Project[] = [
     outcome:
       "Shipped a card reveal interaction that felt smooth and deliberate. A small scope, but the kind of detail that makes an interface feel crafted.",
     tags: ["React", "GSAP", "CSS Animation", "Performance"],
-    heroImage: "/cretivox.png",
-    contentImage: "/cretivox.png",
+    heroImage: "/Image/cretivox.webp",
+    contentImage: "/Image/cretivox.webp",
   },
   {
     slug: "tawada-dashboard",
@@ -152,8 +152,8 @@ export const projects: Project[] = [
     outcome:
       "Replaced a manual reimbursement tracking process with a centralized dashboard. The team got cleaner visibility into submissions and a faster path from request to approval.",
     tags: ["React", "TypeScript", "Dashboard", "Healthcare"],
-    heroImage: "/thc.png",
-    contentImage: "/thc.png",
+    heroImage: "/Image/thc.webp",
+    contentImage: "/Image/thc.webp",
   },
 ];
 

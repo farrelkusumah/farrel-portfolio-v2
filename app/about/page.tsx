@@ -44,7 +44,7 @@ export default function AboutPage() {
               <div className="md:col-span-4 flex flex-col">
                 <div className="w-full aspect-square bg-[#1a1a1a] flex items-center justify-center object-cover">
                   <Image
-                    src="/farrel.png"
+                    src="/Image/farrel.webp"
                     alt="Farrel Kusumah"
                     className="w-full h-full object-cover"
                   />
