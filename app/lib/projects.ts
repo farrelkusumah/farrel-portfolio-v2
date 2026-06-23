@@ -28,12 +28,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "ravio",
+    title: "RAVIO",
+    category: "Web",
+    year: "2025",
+    featured: true,
+    refNumber: "REF. 004", // sesuaikan nomornya
+    status: "COMPLETED",
+    site: "https://ravio-web.netlify.app",
+    shortDescription:
+      "Personal project — a full e-commerce web store for a fictional fashion brand.",
+    role: "Fullstack Developer",
+    skills: ["React", "TypeScript", "E-commerce"],
+    brief:
+      "Ravio is a personal project built to explore what a proper e-commerce experience looks like end to end. A fictional premium fashion brand — men, women, kids, accessories — used as a canvas to build out product browsing, filtering, auth, and checkout flows from scratch.",
+    process: [
+      {
+        number: "01",
+        title: "Designing the store structure",
+        body: "Planned out the full category and product hierarchy first — Women, Men, Kids, Accessories, each with sub-types. Got the data model right before building any UI.",
+      },
+      {
+        number: "02",
+        title: "Building the experience",
+        body: "Built product listing, filtering, bestseller sections, and a recommendation layer. Added multilingual support (ID, EN, JP) and user auth. Kept the UI clean — the kind of store you'd actually want to shop at.",
+      },
+    ],
+    heroImage: "/ravio.png",
+    contentImage: "/ravio.png",
+    outcome:
+      "A fully functional fashion e-commerce store with product browsing, filtering by category and type, customer reviews, personalized recommendations, and multilingual support. Built entirely as a personal project to see it through from idea to deployed product.",
+    tags: ["React", "E-commerce", "Multilingual", "Auth", "Personal Project"],
+  },
+  {
     slug: "ai-robot-gemini",
     title: "AI ROBOT GEMINI",
     category: "AI & Robotics",
     year: "2025",
     featured: true,
-    refNumber: "REF. 001",
+    refNumber: "REF. 003",
     status: "COMPLETED",
     shortDescription:
       "A wheeled robot powered by Jetson Nano and Gemini — it talks, sees, and plays tic-tac-toe.",
@@ -63,7 +96,7 @@ export const projects: Project[] = [
     category: "Web",
     year: "2024",
     featured: false,
-    refNumber: "REF. 003",
+    refNumber: "REF. 002",
     status: "COMPLETED",
     site: "https://cretivox.com",
     shortDescription:
@@ -96,7 +129,7 @@ export const projects: Project[] = [
     category: "Web",
     year: "2024–2025",
     featured: true,
-    refNumber: "REF. 002",
+    refNumber: "REF. 001",
     status: "COMPLETED",
     shortDescription:
       "Internal dashboard for travel reimbursement management at Tawada Healthcare.",
@@ -121,22 +154,6 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Dashboard", "Healthcare"],
     heroImage: "/thc.png",
     contentImage: "/thc.png",
-  },
-  {
-    slug: "untitled-04",
-    title: "[UNTITLED]",
-    category: "Experimental",
-    year: "2025",
-    shortDescription: "Work in progress.",
-    featured: false,
-    refNumber: "REF. 004",
-    status: "IN PROGRESS",
-    role: "—",
-    skills: [],
-    brief: "",
-    process: [],
-    outcome: "",
-    tags: [],
   },
   {
     slug: "untitled-05",
