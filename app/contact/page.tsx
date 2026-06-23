@@ -158,7 +158,7 @@ export default function ContactPage() {
                 {/* Optional Image Box matching the design layout */}
                 <div className="w-full aspect-4/3 bg-[#1a1a1a] flex items-center justify-center object-cover">
                   <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-                    Workspace Image
+                    Farrel Kusumah.
                   </span>
                 </div>
               </FadeUp>

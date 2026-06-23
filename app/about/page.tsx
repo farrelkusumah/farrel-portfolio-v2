@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import PageTransition from "../components/PageTransition";
 import FadeUp from "../components/FadeUp";
 
@@ -42,9 +43,11 @@ export default function AboutPage() {
               {/* Left Column: Photo & Metadata */}
               <div className="md:col-span-4 flex flex-col">
                 <div className="w-full aspect-square bg-[#1a1a1a] flex items-center justify-center object-cover">
-                  <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-                    Oops... image is still in progress, please come back later
-                  </span>
+                  <Image
+                    src="/farrel.png"
+                    alt="Farrel Kusumah"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
