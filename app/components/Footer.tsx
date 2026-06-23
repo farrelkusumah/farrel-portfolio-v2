@@ -37,7 +37,7 @@ export default function Footer() {
             READCV
           </a>
           <a
-            href="https://github.com/BangDen24"
+            href="https://github.com/farrelkusumah"
             target="_blank"
             rel="noopener noreferrer"
             className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
