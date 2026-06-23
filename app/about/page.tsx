@@ -60,7 +60,7 @@ export default function AboutPage() {
                   Farrel Kusumah is an engineer in progress — with a background in electrical engineering and a habit of asking why things are built the way they are. He builds things that are functional, a little unexpected, and still in beta.
                 </p>
                 <p className="font-inter text-sm md:text-base text-[#625f51] leading-relaxed mb-12">
-                  Currently working at the intersection of frontend development and hardware systems. Based in Bandung, available globally.
+                  Currently open to new opportunities — remote, global.
                 </p>
 
                 <div className="flex flex-wrap gap-2">
