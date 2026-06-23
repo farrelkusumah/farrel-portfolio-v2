@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Right — links */}
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 mt-4 md:mt-0">
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/farrelkusumah"
             target="_blank"
             rel="noopener noreferrer"
             className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
@@ -21,7 +21,7 @@ export default function Footer() {
             LINKEDIN
           </a>
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/farrelraden"
             target="_blank"
             rel="noopener noreferrer"
             className="font-inter text-[10px] uppercase tracking-[0.2em] text-[#625f51] hover:opacity-70 transition-opacity duration-150 active:opacity-50 min-h-11 flex items-center"
