@@ -18,45 +18,77 @@ export type Project = {
   process: ProcessStep[];
   outcome: string;
   tags: string[];
-  nextProject: string; // slug of the next project
   featured: boolean;
   refNumber: string;
   status: "COMPLETED" | "IN PROGRESS" | "ONGOING";
   site?: string; // Optional external site link
+  heroImage?: string;
+  contentImage?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "ai-robot-gemini",
+    title: "AI ROBOT GEMINI",
+    category: "AI & Robotics",
+    year: "2025",
+    featured: true,
+    refNumber: "REF. 001",
+    status: "COMPLETED",
+    shortDescription:
+      "A wheeled robot powered by Jetson Nano and Gemini — it talks, sees, and plays tic-tac-toe.",
+    role: "Hardware + Software Engineer",
+    skills: ["Jetson Nano", "Gemini API", "Python", "Embedded Systems"],
+    brief:
+      "The idea was simple: what if you could have a conversation with a robot, ask it what it sees, and then beat it at tic-tac-toe? Built on Jetson Nano with Gemini as the AI layer, the project was about making AI feel physical and interactive — not just something on a screen.",
+    process: [
+      {
+        number: "01",
+        title: "Hardware setup",
+        body: "Set up Jetson Nano as the main controller, connected camera, microphone, and display. Also wired up the wheel-based movement system — so the robot could actually go somewhere, not just sit there looking smart.",
+      },
+      {
+        number: "02",
+        title: "Gemini as the brain",
+        body: "Integrated Gemini API to handle conversation, camera-based scene description, and game logic for tic-tac-toe. Multimodal input meant the robot could switch between talking, seeing, and playing without separate systems for each.",
+      },
+    ],
+    outcome:
+      "A working robot that holds a conversation, describes what it sees through the camera, and plays tic-tac-toe — all while being able to physically move around. Proof that AI doesn't have to stay behind a screen.",
+    tags: ["Jetson Nano", "Gemini API", "Python", "IoT"],
+  },
   {
     slug: "cretivox",
     title: "CRETIVOX",
     category: "Web",
     year: "2024",
-    featured: true,
-    refNumber: "REF. 001",
+    featured: false,
+    refNumber: "REF. 003",
     status: "COMPLETED",
     site: "https://cretivox.com",
     shortDescription:
-      "Crafted interactive animations using GSAP for digital storytelling.",
+      "Built card reveal animations with GSAP as part of the Cretivox project.",
     role: "Frontend Developer",
     skills: ["React", "GSAP", "CSS Animation"],
     brief:
-      "Modern digital storytelling needs more than static layouts. Cretivox needed a web experience that moved — one where animations weren't decoration, but part of the narrative itself.",
+      "Part of the Cretivox project — tasked with bringing a set of cards to life. They needed to open with intention, not just appear. The motion had to feel considered, with the content inside revealing naturally after the card opened.",
     process: [
       {
         number: "01",
-        title: "Motion architecture",
-        body: "Mapped out the animation timeline before writing a single line of code. Every entrance, transition, and scroll trigger was planned as part of the story flow.",
+        title: "Getting the CSS right first",
+        body: "Before any animation, spent a good amount of time sorting out the card layout and states. A lot of iteration — but clean structure was what made the GSAP transitions actually work.",
       },
       {
         number: "02",
-        title: "GSAP implementation",
-        body: "Used GSAP ScrollTrigger for scroll-based animations and Timeline for sequenced entrance effects. Performance was monitored continuously.",
+        title: "Card animation with GSAP",
+        body: "Used GSAP to animate the card opening sequence and time the content reveal inside. The goal was making it feel like the card was genuinely opening, not just appearing.",
       },
     ],
     outcome:
-      "Cretivox launched with a measurably higher engagement rate. The animations became a core part of the brand identity — not just a feature, but the feeling of the product.",
-    tags: ["React", "GSAP", "ScrollTrigger", "Performance"],
-    nextProject: "tawada-dashboard",
+      "Shipped a card reveal interaction that felt smooth and deliberate. A small scope, but the kind of detail that makes an interface feel crafted.",
+    tags: ["React", "GSAP", "CSS Animation", "Performance"],
+    heroImage: "/cretivox.png",
+    contentImage: "/cretivox.png",
   },
   {
     slug: "tawada-dashboard",
@@ -67,7 +99,7 @@ export const projects: Project[] = [
     refNumber: "REF. 002",
     status: "COMPLETED",
     shortDescription:
-      "Internal dashboard for healthcare data visualization at PLABS.ID.",
+      "Internal dashboard for travel reimbursement management at Tawada Healthcare.",
     role: "Frontend Developer",
     skills: ["React", "TypeScript", "Data Visualization"],
     brief:
@@ -75,50 +107,20 @@ export const projects: Project[] = [
     process: [
       {
         number: "01",
-        title: "Data mapping",
-        body: "Worked closely with the operations team to understand which metrics mattered most and how they were currently being tracked manually.",
+        title: "Understanding the reimbursement flow",
+        body: "Mapped out how the team was currently handling travel reimbursement requests — what data was being tracked, where things got lost, and what the review process looked like.",
       },
       {
         number: "02",
-        title: "Interface build",
-        body: "Built modular dashboard components in React with TypeScript, prioritizing readability and performance over visual complexity.",
+        title: "Dashboard build",
+        body: "Built the interface in React with TypeScript. Focused on making the data easy to read and act on, not just easy to display.",
       },
     ],
     outcome:
-      "The dashboard replaced several manual reporting processes, reducing time spent on weekly data compilation and giving the team a single source of truth for operations.",
+      "Replaced a manual reimbursement tracking process with a centralized dashboard. The team got cleaner visibility into submissions and a faster path from request to approval.",
     tags: ["React", "TypeScript", "Dashboard", "Healthcare"],
-    nextProject: "ai-robot-gemini",
-  },
-  {
-    slug: "ai-robot-gemini",
-    title: "AI ROBOT GEMINI",
-    category: "AI & Robotics",
-    year: "2025",
-    featured: true,
-    refNumber: "REF. 003",
-    status: "COMPLETED",
-    shortDescription:
-      "AI-powered robot using Jetson Nano + Gemini as core intelligence.",
-    role: "Hardware + Software Engineer",
-    skills: ["Jetson Nano", "Gemini API", "Python", "Embedded Systems"],
-    brief:
-      "The gap between AI and physical interaction is still wide. This project was about bridging that — building a robot that could see, hear, and respond using Gemini as its brain.",
-    process: [
-      {
-        number: "01",
-        title: "Hardware setup",
-        body: "Configured Jetson Nano as the controller, wiring touchscreen, camera, and microphone inputs. Each component needed to communicate reliably under real-time constraints.",
-      },
-      {
-        number: "02",
-        title: "Gemini integration",
-        body: "Connected the Gemini API as the core intelligence layer — processing multimodal inputs and returning responses through display and motor output.",
-      },
-    ],
-    outcome:
-      "A working robot that accepts touchscreen, camera, and microphone input and responds through a display interface and physical movement. A proof that AI doesn't have to stay on a screen.",
-    tags: ["Jetson Nano", "Gemini API", "Python", "IoT"],
-    nextProject: "cretivox",
+    heroImage: "/thc.png",
+    contentImage: "/thc.png",
   },
   {
     slug: "untitled-04",
@@ -129,7 +131,12 @@ export const projects: Project[] = [
     featured: false,
     refNumber: "REF. 004",
     status: "IN PROGRESS",
-    role: "—", skills: [], brief: "", process: [], outcome: "", tags: [], nextProject: ""
+    role: "—",
+    skills: [],
+    brief: "",
+    process: [],
+    outcome: "",
+    tags: [],
   },
   {
     slug: "untitled-05",
@@ -140,7 +147,12 @@ export const projects: Project[] = [
     featured: false,
     refNumber: "REF. 005",
     status: "IN PROGRESS",
-    role: "—", skills: [], brief: "", process: [], outcome: "", tags: [], nextProject: ""
+    role: "—",
+    skills: [],
+    brief: "",
+    process: [],
+    outcome: "",
+    tags: [],
   },
   {
     slug: "untitled-06",
@@ -151,8 +163,13 @@ export const projects: Project[] = [
     featured: false,
     refNumber: "REF. 006",
     status: "IN PROGRESS",
-    role: "—", skills: [], brief: "", process: [], outcome: "", tags: [], nextProject: ""
-  }
+    role: "—",
+    skills: [],
+    brief: "",
+    process: [],
+    outcome: "",
+    tags: [],
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "../lib/projects";
 import PageTransition from "../components/PageTransition";
 import FadeUp from "../components/FadeUp";
@@ -38,11 +39,20 @@ export default function WorkPage() {
                   }`}
                 >
                   {/* Left/Right half: Image */}
-                  <div className="w-full md:w-1/2 aspect-video md:aspect-4/3 bg-[#1a1a1a] flex items-center justify-center shrink-0 object-cover">
+                  <div className="w-full md:w-1/2 aspect-video md:aspect-4/3 bg-[#1a1a1a] flex items-center justify-center shrink-0 object-cover relative overflow-hidden">
                     {/* Image placeholder */}
-                    <span className="font-inter text-xs uppercase tracking-widest text-[#7f7b6c]/50">
-                      Oops... image is still in progress, please come back later
-                    </span>
+                    {project.heroImage ? (
+                      <Image
+                        src={project.heroImage}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <span className="font-inter text-xs uppercase tracking-widest text-[#7f7b6c]/50">
+                        Oops... image is still in progress, please come back later
+                      </span>
+                    )}
                   </div>
 
                   {/* Left/Right half: Text */}

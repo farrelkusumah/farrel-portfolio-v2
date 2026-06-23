@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { projects, getProjectBySlug } from "../../lib/projects";
 import PageTransition from "../../components/PageTransition";
 import FadeUp from "../../components/FadeUp";
@@ -9,7 +10,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  return projects.filter((p) => p.featured).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata(props: PageProps) {
@@ -27,13 +28,14 @@ export default async function ProjectPage(props: PageProps) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  const featuredProjects = [...projects]
+  const featuredProjects = projects
     .filter((p) => p.featured)
-    .sort((a, b) => a.refNumber.localeCompare(b.refNumber));
-  
-  const currentIndex = featuredProjects.findIndex((p) => p.slug === project.slug);
-  const isLast = currentIndex === -1 || currentIndex === featuredProjects.length - 1;
-  const nextProject = isLast ? null : featuredProjects[currentIndex + 1];
+    .sort((a, b) => a.refNumber.localeCompare(b.refNumber)); // just ascending, no slice
+
+  const currentIndex = featuredProjects.findIndex(
+    (p) => p.slug === project.slug,
+  );
+  const nextProject = featuredProjects[currentIndex + 1] ?? null;
 
   return (
     <PageTransition>
@@ -52,10 +54,20 @@ export default async function ProjectPage(props: PageProps) {
 
         {/* ── Hero Image ─────────────────────────────────────────────── */}
         <FadeUp delay={0.1}>
-          <div className="w-full aspect-16/7 bg-[#1a1a1a] flex items-center justify-center object-cover">
-            <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-              Oops... image is still in progress, please come back later
-            </span>
+          <div className="w-full aspect-16/7 bg-[#1a1a1a] flex items-center justify-center object-cover relative overflow-hidden">
+            {project.heroImage ? (
+              <Image
+                src={project.heroImage}
+                alt={project.title}
+                fill
+                priority
+                className="object-cover"
+              />
+            ) : (
+              <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
+                Oops... image is still in progress, please come back later
+              </span>
+            )}
           </div>
         </FadeUp>
 
@@ -63,9 +75,8 @@ export default async function ProjectPage(props: PageProps) {
         <div className="max-w-screen-2xl mx-auto px-5 md:px-16 mt-16 mb-24">
           <FadeUp delay={0.2}>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-              
               {/* Left Column: Metadata Sidebar */}
-                <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-1 gap-4 md:block mb-8 md:mb-0">
+              <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-1 gap-4 md:block mb-8 md:mb-0">
                 <div className="mb-4 md:mb-8">
                   <p className="font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-1">
                     ROLE
@@ -118,7 +129,6 @@ export default async function ProjectPage(props: PageProps) {
 
               {/* Right Column: Main Content */}
               <div className="md:col-span-9">
-                
                 {/* The Brief */}
                 <div>
                   <p className="font-inter text-[10px] tracking-[0.25em] uppercase text-[#7f7b6c] mb-6">
@@ -152,10 +162,19 @@ export default async function ProjectPage(props: PageProps) {
                 </div>
 
                 {/* Content Image Placeholder (as seen in design) */}
-                <div className="w-full aspect-21/9 bg-[#1a1a1a] mt-16 flex items-center justify-center object-cover">
-                  <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
-                    Oops... image is still in progress, please come back later
-                  </span>
+                <div className="w-full aspect-21/9 bg-[#1a1a1a] mt-16 flex items-center justify-center object-cover relative overflow-hidden">
+                  {project.contentImage ? (
+                    <Image
+                      src={project.contentImage}
+                      alt={`${project.title} Details`}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <span className="font-inter text-xs tracking-widest uppercase text-[#7f7b6c]/50">
+                      Oops... image is still in progress, please come back later
+                    </span>
+                  )}
                 </div>
 
                 {/* The Outcome */}
@@ -179,7 +198,6 @@ export default async function ProjectPage(props: PageProps) {
                     </span>
                   ))}
                 </div>
-
               </div>
             </div>
           </FadeUp>
