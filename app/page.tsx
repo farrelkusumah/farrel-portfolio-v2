@@ -23,8 +23,12 @@ export default function HomePage() {
             </h1>
           </FadeUp>
           <FadeUp delay={0.3}>
-            <p className="font-inter text-xs uppercase tracking-[0.2em] text-[#625f51] mt-10">
+            <p className="font-inter text-xs uppercase tracking-[0.2em] text-[#625f51] mt-10 font-semibold">
               ENGINEER. BUILDER. STILL FIGURING IT OUT — ON PURPOSE.
+            </p>
+            <p className="font-inter text-[10px] uppercase tracking-[0.15em] text-[#7f7b6c] mt-2">
+              Bridging the gap between software development and product
+              intuition.
             </p>
           </FadeUp>
         </div>
@@ -55,7 +59,7 @@ export default function HomePage() {
                 className="group flex flex-col md:flex-row md:items-center w-full py-4 md:py-6 transition-all duration-300"
               >
                 {/* Title */}
-                  <span className="font-space-grotesk font-bold text-3xl md:text-5xl text-[#2C2C2A] group-hover:text-[#516454] group-hover:scale-[1.012] group-hover:translate-x-1 transition-all duration-300 origin-left shrink-0 mb-1 md:mb-0 tracking-[-0.02em] inline-block">
+                <span className="font-space-grotesk font-bold text-3xl md:text-5xl text-[#2C2C2A] group-hover:text-[#516454] group-hover:scale-[1.012] group-hover:translate-x-1 transition-all duration-300 origin-left shrink-0 mb-1 md:mb-0 tracking-[-0.02em] inline-block">
                   {project.title}
                 </span>
 
@@ -83,7 +87,7 @@ export default function HomePage() {
 
         {/* Static placeholder row */}
         <FadeUp delay={0.1 + projects.length * 0.08}>
-            <div className="flex flex-col md:flex-row md:items-baseline w-full py-6 md:py-10 opacity-20 pointer-events-none select-none">
+          <div className="flex flex-col md:flex-row md:items-baseline w-full py-6 md:py-10 opacity-20 pointer-events-none select-none">
             <span className="font-space-grotesk font-bold text-3xl md:text-5xl text-[#2C2C2A] mb-1 md:mb-0 tracking-[-0.02em]">
               MORE IN PROGRESS
             </span>
